@@ -34,23 +34,20 @@
 					<h3>Outline</h3>
 					<ul>
 						<li>Introduction</li>
-						<li>Background</li>
 						<li>Related works</li>
 						<li>MobFogSim</li>
+						<li>Static vs Dynamic slicing</li>
 						<li>Dynamic Network Slicing for Mobile Users</li>
 						<li>Overhead and performance of Dynamic Network Slice allocation</li>
 						<li>Conclusion</li>
 					</ul>
 				</section>
 
-				<section data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Introduction<h3>
-				</section>
-
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>The role of mobile users</h3>
-					<img src="images/5g_users_and_data_traffic.png" class="r-stretch">
-					<small>Source: GSMA[1][2] and Ericsson[3]</small>
+					<img src="images/manhattan.gif" style="width: 50%; height: 50% border: 1px solid #000000;">
+<!--					<img src="images/5g_users_and_data_traffic.png" class="r-stretch">
+					<small>Source: GSMA[1][2] and Ericsson[3]</small>-->
 					<aside class="notes">
 					</aside>
 				</section>
@@ -72,20 +69,17 @@
 					</aside>
 				</section>
 
-<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Research questions</h3>
 					<ul class="r-fit-text">
 						<li>What is the impact of user mobility in network slicing management?</li>
 						<li>Can dynamic network slicing improve the performance of the service placement and migration process?</li>
-						<li>What is the impact of resource sharing in the performance of network slicing for mobile users?</li>
 						<li>What is the required time to perform network slice operations such as resource allocation and slice reconfigurations and how it impacts the network performance?</li>
 						<li>Is dynamic slicing a suitable solution to deal with traffic variation triggered by mobile users in edge computing environments?</li>
-						<li>Can dynamic slicing be applied in vehicular-cloud environments?</li>
-						<li>Is there a validation environment to simulate network resource management scenarios which includes user mobility, network slicing and service migration?</li>
 					</ul>
 				</section>
--->
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+
+<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Objective</h3>
 						<p>This work focuses on the <b>dynamic slicing allocation problem</b>. In special, this work proposes the use of dynamic network slicing as a supporting technology for improving solutions for the <b>service placement and migration</b> problem in the context of <b>user mobility support in 5G/fog</b> computing infrastructures.</p>
 				</section>
@@ -96,6 +90,7 @@
 					<aside class="notes">
 					</aside>
 				</section>
+-->
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Related work</h3>
@@ -389,13 +384,6 @@
 
 					<aside class="notes">
 						
-					</aside>
-				</section>
-
-				<section data-background-transition="slide" data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>MobFogSim</h3>
-					
-					<aside class="notes">
 					</aside>
 				</section>
 
@@ -701,35 +689,11 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Dynamic Slicing Allocation Results</h3>
-					<p>Migration time - Slice 1 / both slices sharing resources</p>
-					<img src="images/migration_time_dynamic_uni_UCC.png" style="width: 33%; height: 32%;">
-					<img src="images/migration_time_dynamic_legend_UCC.png" style="width: 32%; height: 32%;">
-					<img src="images/migration_time_dynamic_UCC.png" style="width: 33%; height: 32%;">
-
-					<aside class="notes">
-					(next) No grafico a esquerda, nos demos prioridade para um dos slices, no caso o slice 1, em azul. Quando o slice 2 terminava as suas migrações e apresentava recursos ociosos, nós realocamos esses recursos pro slice 1 para acelerar as migrações dele. Nós podemos ver que nos cenarios em que o slice 1 era superior ao slice 2 em termos de desempenho, isso se manteve. Porem, quando o slice 1 teria um desempenho muito pior ao slice 2, devido a ajuda desses recursos, o slice 1 passou a ter um teto de desempenho compativel com uma distribuição justa da capacidade do link (next). No grafico a direita, os dois slices trocam recursos quando apresentam recursos ociosos. Nesse cenario, o melhor caso de cada slice se manteve, mas o pior caso de cada um ganhou um teto compativel com a capacidade total do link.
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
-					<h3>Dynamic Slicing Allocation Results</h3>
-					<p>Migration time - Slice 1 / both slices sharing resources</p>
-					<img src="images/migration_time_dynamic_uni_UCC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
-					<img src="images/migration_time_dynamic_legend_UCC.png" style="width: 32%; height: 32%;">
+					<p>Migration time - both slices sharing resources</p>
 					<img src="images/migration_time_dynamic_UCC.png" style="width: 32%; height: 32%;">
-
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
-					<h3>Dynamic Slicing Allocation Results</h3>
-					<p>Migration time - Slice 1 / both slices sharing resources</p>
-					<img src="images/migration_time_dynamic_uni_UCC.png" style="width: 32%; height: 32%;">
 					<img src="images/migration_time_dynamic_legend_UCC.png" style="width: 32%; height: 32%;">
-					<img src="images/migration_time_dynamic_UCC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
 
 					<aside class="notes">
 					</aside>
@@ -1131,13 +1095,13 @@
 					</aside>
 				</section>
 -->
-				<section data-background-transition="slide" data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>What is the cost of slice reconfiguration?</h3>
 					<aside class="notes">
 					</aside>
 				</section>
 
-				<section data-background-transition="slide" data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
 					<h3>What is the cost of slice reconfiguration?</h3>
 					<img src="images/whatitcost.png" style="width: 50%; height: 50%;">
 					<aside class="notes">
@@ -1193,7 +1157,7 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Reconfiguration overhead</h3>
 					<p>Evaluation</p>				
 						<table style="font-size: 20px; background-color:rgba(255, 255, 255, 0.9)">
@@ -1223,7 +1187,7 @@
 							</tbody>
 						</table>
 				</section>
-
+-->
 <!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Reconfiguration overhead</h3>
 					<p>Number of reconfigurations</p>
