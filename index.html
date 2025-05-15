@@ -79,22 +79,15 @@
 					</ul>
 				</section>
 
-<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Objective</h3>
-						<p>This work focuses on the <b>dynamic slicing allocation problem</b>. In special, this work proposes the use of dynamic network slicing as a supporting technology for improving solutions for the <b>service placement and migration</b> problem in the context of <b>user mobility support in 5G/fog</b> computing infrastructures.</p>
+						<p>This work focuses on the <b>dynamic slicing allocation problem</b>. In special, this work proposes the use of dynamic network slicing as a supporting technology for improving solutions for the <b>service placement and migration</b> problem in the context of <b>user mobility support in 5G/edge</b> computing infrastructures.</p>
 				</section>
-
-				<section data-background-transition="slide" data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Related work</h3>
-					
-					<aside class="notes">
-					</aside>
-				</section>
--->
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Related work</h3>
 					<p>Scope of network slicing-related solutions</p>
+					<div class="r-stack">
 					<table style="font-size: 14px;">
 						<thead>
 							<tr>
@@ -233,7 +226,8 @@
 							</tr>
 						</tbody>
 					</table>
-
+					<p class="fragment" style="font-size: 40px; background-color:rgba(255, 255, 255, 0.5)">Lack of works which combine network slicing, and service placement and migration in the context of user mobility</p>
+					</div>
 					<aside class="notes">
 						
 					</aside>
@@ -242,6 +236,7 @@
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Related work</h3>
 					<p>Scope of edge network simulators</p>
+					<div class="r-stack">
 					<table style="font-size: 16px;">
 						<thead>
 							<tr>
@@ -381,7 +376,8 @@
 							</tr>
 						</tbody>
 					</table>
-
+					<p class="fragment" style="font-size: 40px; background-color:rgba(255, 255, 255, 0.5)">Lack of simulators which offer network slicing, service placement and migration, and user mobility support</p>
+					</div>
 					<aside class="notes">
 						
 					</aside>
@@ -392,7 +388,7 @@
 					<p>Proposed Validation Environment</p>
 					<ul class="r-fit-text">
 						<p>CloudSim[8] &#10132; iFogSim[5] &#10132; MyiFogSim[9] &#10132; MobFogSim[7]</p>
-						<p>It simulates mobile Iot devices on Fog Computing environment</p>
+						<p>It simulates mobile Iot devices on Edge Computing environment</p>
 						<p>MobFogSim supports:</p>
 						<ul>
 							<li>VM/container cold/live migration;</li>
@@ -428,7 +424,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Number of fog nodes</td>
+								<td>Number of edge nodes</td>
 								<td>144</td>
 							</tr>
 							<tr>
@@ -444,7 +440,7 @@
 								<td>1.2MB, 6MB, and 12MB</td>
 							</tr>
 							<tr>
-								<td>Througput between fog nodes</td>
+								<td>Througput between edge nodes</td>
 								<td>74 mbps</td>
 							</tr>
 							<tr>
@@ -575,7 +571,10 @@
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Validation scenario</h3>
+					<div class="r-stack">
 					<img src="images/simulationscenario.png" style="width: 70%; height: 70% border: 1px solid #000000;">
+					<p class="fragment" style="font-size: 30px; background-color:rgba(255, 255, 255, 0.8)">Scenario: a mobile user moves from a processing<br> node to another in a constant speed.<br> It trigger a service migration between those nodes.<br><br>Two slices serve different number of users.<br> Different levels of resouce availability was also considered.</p>
+					</div>
 
 					<aside class="notes">
 						Em um primeiro experimento nos montamos um cenario reduzido, apenas com dois nós na névoa e com os usuarios com uma mobilidade reduzida, apenas transitando de um nó pra o outro. Nós criamos dois slices e avaliamos diferentes combinações de oferta e demanda pra eles.
@@ -584,6 +583,7 @@
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Validation scenario</h3>
+					
 					<table style="font-size: 20px;">
 						<thead>
 							<tr>
@@ -593,7 +593,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Number of fog nodes</td>
+								<td>Number of edge nodes</td>
 								<td>2</td>
 							</tr>
 							<tr>
@@ -605,7 +605,7 @@
 								<td>128 MB</td>
 							</tr>
 							<tr>
-								<td>Througput between fog nodes</td>
+								<td>Througput between edge nodes</td>
 								<td>74 mbps</td>
 							</tr>
 							<tr>
@@ -634,48 +634,32 @@
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Static Slicing Allocation Results</h3>
-					<p>Migration time, link usage, and wasted bandwidth</p>
-					<img src="images/migration_time_UCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img src="images/link_usage_StaticUCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img src="images/wastedbandwidthStaticUCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
+					<p>Migration time and link usage</p>
+					<img src="images/ucc_static_1.png" style="width: 80%; height: 80%;">
 
 					<aside class="notes">
 						(next) No grafico da esquerda nós podemos ver o tempo de migração. O slice 1 é representado pela cor azul e o slice 2 pela cor vermelha. Nós podemos observar que quanto maior a demanda, pior fica os resultados para aquele slice, ja que mais usuarios tem que dividir a mesma fatia de recursos. A quantidade de recursos alocada pra cada slice tambem prejudica o desempenho, quanto mais recursos, mais rapido fica a migração. (next) O grafico do centro o quanto um link ficou sendo ocupado realizando migrações durante a simulação. Da pra ver que os links dos slices de pior desempenho ficaram sobrecarregados enquanto os de melhores desempenhos não utilizaram os recursos disponiveis pra eles durante todo o tempo. (next) Isso pode ser mensurado no grafico da direita que mostra a quantidade de dados que poderiam ser transmitidos enquanto esses links estavam ociosos.
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
-					<p>Migration time, link usage, and wasted bandwidth</p>
-					<img src="images/migration_time_UCC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
-					<img src="images/link_usage_StaticUCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img src="images/wastedbandwidthStaticUCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
+					<p>Migration time and link usage</p>
+					<img src="images/ucc_static_2.png" style="width: 80%; height: 80%;">
 
 					<aside class="notes">
 					</aside>
 				</section>
-				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
-					<p>Migration time, link usage, and wasted bandwidth</p>
-					<img src="images/migration_time_UCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img src="images/link_usage_StaticUCC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
-					<img src="images/wastedbandwidthStaticUCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
+					<p>Migration time and link usage</p>
+					<img src="images/ucc_static_3.png" style="width: 80%; height: 80%;">
 
 					<aside class="notes">
 					</aside>
 				</section>
-				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
-					<h3>Static Slicing Allocation Results</h3>
-					<p>Migration time, link usage, and wasted bandwidth</p>
-					<img src="images/migration_time_UCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img src="images/link_usage_StaticUCC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img src="images/wastedbandwidthStaticUCC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
 
-					<aside class="notes">
-					</aside>
-				</section>
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Proposed slice allocation heuristic</h3>
@@ -689,10 +673,20 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Dynamic Slicing Allocation Results</h3>
 					<p>Migration time - both slices sharing resources</p>
 					<img src="images/migration_time_dynamic_UCC.png" style="width: 32%; height: 32%;">
+					<img src="images/migration_time_dynamic_legend_UCC.png" style="width: 32%; height: 32%;">
+
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
+					<h3>Dynamic Slicing Allocation Results</h3>
+					<p>Migration time - both slices sharing resources</p>
+					<img src="images/migration_time_dynamic_UCC_2.png" style="width: 32%; height: 32%;">
 					<img src="images/migration_time_dynamic_legend_UCC.png" style="width: 32%; height: 32%;">
 
 					<aside class="notes">
@@ -756,46 +750,38 @@
 					</aside>
 				</section>
 				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
+				<section data-background-color="#FFF" data-transition="slide" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/tempomigracaoSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img  src="images/migracoesSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img  src="images/latenciaSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_1.png" style="width: 80%; height: 80% border: 1px solid #000000;">
 
 					<aside class="notes">
 						O que nós podemos notar nesse primeiro experimento utilizando alocação estatica dos slices(next), o tempo de migração, no grafico a esquerda, apresentou o mesmo comportamento do experimento anterior. (next) pro numero de migração que cada usuario fez, que é uma novidade desse experimento, no grafico do centro, da pra perceber que quanto mais lenta a migração, menos migrações os usuarios fazem (next) e isso tem impacto na latencia que eles experimentam, no grafico da direita, ja que o serviço que o usuario esta acessando esta ficando mais longe dele.
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-transition="none" data-background-transition="none" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/tempomigracaoSBRC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
-					<img  src="images/migracoesSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img  src="images/latenciaSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_2.png" style="width: 80%; height: 80% border: 1px solid #000000;">
 
 					<aside class="notes">
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-transition="none" data-background-transition="none" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/tempomigracaoSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img  src="images/migracoesSBRC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
-					<img  src="images/latenciaSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_3.png" style="width: 80%; height: 80% border: 1px solid #000000;">
 
 					<aside class="notes">
 					</aside>
 				</section>
 				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-transition="none" data-background-transition="none" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/tempomigracaoSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img  src="images/migracoesSBRC.png" style="width: 32%; height: 32% border: 1px solid #000000;">
-					<img  src="images/latenciaSBRC.png" style="width: 32%; height: 32%; border: 4px solid #000000;">
+					<img  src="images/static_slicing_mobile_4.png" style="width: 80%; height: 80% border: 1px solid #000000;">
 
 					<aside class="notes">
 					</aside>
@@ -918,7 +904,7 @@
 									<td>Lowest latency</td>
 								</tr>
 								<tr>
-									<td>Server node processing capacity (Fog)</td>
+									<td>Server node processing capacity (edge)</td>
 									<td>6468MIPS</td>
 								</tr>
 								<tr>
@@ -926,7 +912,7 @@
 									<td>[3234,6468]MIPS</td>
 								</tr>
 								<tr>
-									<td>Fog node bandwidth</td>
+									<td>Edge node bandwidth</td>
 									<td>[74.1, 148.2]</td>
 								</tr>
 								<tr>
@@ -1006,7 +992,7 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate>
 					<h3>Adhoc scenario</h3>
 					<p>Service placement</p>
 					<div class="r-vstack">
@@ -1019,7 +1005,7 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Adhoc scenario</h3>
 					<p>Service placement</p>
 					<div class="r-vstack">
@@ -1057,7 +1043,7 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate>
 					<h3>Adhoc scenario</h3>
 					<p>Service Migration</p>
 					<div class="r-vstack">
@@ -1070,7 +1056,7 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Adhoc scenario</h3>
 					<p>Service Migration</p>
 					<div class="r-vstack">
@@ -1101,7 +1087,7 @@
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>What is the cost of slice reconfiguration?</h3>
 					<img src="images/whatitcost.png" style="width: 50%; height: 50%;">
 					<aside class="notes">
@@ -1197,7 +1183,7 @@
 					</aside>
 				</section>
 -->				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Reconfiguration overhead</h3>
 					<p>Slice outage</p>
 					<img src="images/timeline_outage.png" style="width: 95%; height: 95%;">
@@ -1205,18 +1191,17 @@
 					<aside class="notes">
 					</aside>
 				</section>
-<!--				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Reconfiguration overhead</h3>
-					<p>Received bandwidth</p>
-					<img src="images/timeline_realocacoes_uni_banda.png" style="width: 95%; height: 95%;">
+					<p>Slice outage</p>
+					<img src="images/timeline_outage_2.png" style="width: 95%; height: 95%;">
 				
 					<aside class="notes">
 					</aside>
 				</section>
--->				
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Reconfiguration overhead</h3>
 					<p>Service Migration time</p>
 					<img src="images/timeline_migration_time.png" style="width: 95%; height: 95%;">
@@ -1224,11 +1209,29 @@
 					<aside class="notes">
 					</aside>
 				</section>
+
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
+					<h3>Reconfiguration overhead</h3>
+					<p>Service Migration time</p>
+					<img src="images/timeline_migration_time_2.png" style="width: 95%; height: 95%;">
 				
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%"  data-auto-animate>
 					<h3>Reconfiguration overhead</h3>
 					<p>Latency</p>
 					<img src="images/timeline_latency.png" style="width: 95%; height: 95%;">
+				
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
+					<h3>Reconfiguration overhead</h3>
+					<p>Latency</p>
+					<img src="images/timeline_latency_2.png" style="width: 95%; height: 95%;">
 				
 					<aside class="notes">
 					</aside>
@@ -1239,7 +1242,9 @@
 					<ul class="r-fit-text">
 						<p><b>User mobility triggers spatial and temporal traffic variations over time</b>. In this context, network infrastructure might present <b>underutilisation and overcapacity scenarios</b>.</p>
 						<p>Dynamic network slicing has the capability of 1) <b>setting priority levels</b> for distinct user groups and providing them different resources and 2) <b>reducing resource underutilisation and improves network performance by on-demand resource (re)distributions.</b></p>
-						<p>However, the frequency and the efficiency of those reconfigurations is crucial to the success of such a solution due its overhead.</p>
+						<p>Dynamic network slicing <b>reduces the required time to perform service migrations</b>. It allows more service migrations if needed, and provides <b>lower latency by placing services closer to their users</b>.</p>
+						<p>However, the <b>frequency and the efficiency</b> of those reconfigurations is crucial to the success of such a solution due its <b>overhead</b>.</p>
+						<p>Slices that quickly operate reconfigurations(a few seconds, e.g., 1-5) <b>reduces its resource underutilisation and provide lower and more stable latency to their users</b> than slices with higher reconfiguration delays(up to 1 min).</p>
 					</ul>
 				</section>
 
@@ -1250,7 +1255,7 @@
 						<li>One study of the dynamic network slicing as a supporting technology for user mobility support in fog/edge computing infrastructures and vehicular networks;</li>
 						<li>A mathematical model which describes the overhead/expected time to allocate and reconfigure the network slices;</li>
 						<li>Resource management mechanisms for dynamic slicing allocation, which include solutions for defining the slice shaping, resource allocation and reallocation, and resource sharing scope;</li>
-						<li>One simulator for slicing validation in fog computing-based infrastructures, including support to user mobility and service migration.</li>
+						<li>One simulator for slicing validation in edge computing-based infrastructures, including support to user mobility and service migration.</li>
 					</ul>
 				</section>
 
@@ -1262,7 +1267,7 @@
 						<li><b>D. M. Goncalves</b>, C. Puliafito, E. Mingozzi, L. F. Bittencourt, and E. R. M. Madeira. End-to-end Network Slicing in Vehicular Clouds Using the Mobfogsim Simulator. Ad Hoc Networks, page 103096, 2023;</li>
 						<li><b>D. M. Goncalves</b>, L. F. Bittencourt, and E. R. M. Madeira. Overhead and Performance of Dynamic Network Slice Allocation for Mobile Users. Future Generation Computer Systems, 2024;</li>
 						<p><b>Conferences</b></p>
-						<li><b>D. M. Goncalves</b>, C. Puliafito, E. Mingozzi, O. Rana, L. F. Bittencourt, and E. R. M. Madeira. Dynamic Network Slicing in Fog Computing for Mobile Users in Mobfogsim. In 2020 IEEE/ACM 13th International Conference on Utility and Cloud Computing (UCC), pages 237–246. IEEE, 2020;</li>
+						<li><b>D. M. Goncalves</b>, C. Puliafito, E. Mingozzi, O. Rana, L. F. Bittencourt, and E. R. M. Madeira. Dynamic Network Slicing in edge Computing for Mobile Users in Mobfogsim. In 2020 IEEE/ACM 13th International Conference on Utility and Cloud Computing (UCC), pages 237–246. IEEE, 2020;</li>
 						<li><b>D. M. Goncalves</b>, L. F. Bittencourt, and E. R. M. Madeira. Fatiamento Dinâmico de Redes em Computaçao em Névoa para Usuários Móveis. In Anais do XXXIX Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos, pages 57–70. SBC, 2021. (In Portuguese);</li>
 						<li><b>D. M. Goncalves</b>, L. F. Bittencourt, and E. R. M. Madeira. Alocação de Fatias de Rede Fim-a-fim para Usuários Móveis Utilizando o Simulador Mobfogsim. In Anais do XL Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos, pages 112–125. SBC, 2022 (In Portuguese);</li>
 						<p><b>Tutorial</b></p>
