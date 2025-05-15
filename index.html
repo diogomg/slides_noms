@@ -46,9 +46,9 @@
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>The role of mobile users</h3>
 					<img src="images/manhattan.gif" style="width: 50%; height: 50% border: 1px solid #000000;">
-<!--					<img src="images/5g_users_and_data_traffic.png" class="r-stretch">
-					<small>Source: GSMA[1][2] and Ericsson[3]</small>-->
+
 					<aside class="notes">
+						Mobile users 
 					</aside>
 				</section>
 
@@ -392,7 +392,7 @@
 						<p>MobFogSim supports:</p>
 						<ul>
 							<li>VM/container cold/live migration;</li>
-							<li>Realistic mobility support;</li>
+							<li>Realistic mobility support (e.g integration with traffic simulation SUMO);</li>
 							<li>Dynamic Network Slicing;</li>
 							<li>Device-to-device communication.</li>
 						</ul>
@@ -402,172 +402,6 @@
 						O que é o mobfogsim? Ele é um simulador que não nasceu do zero. Ele foi baseado em outros simuladores mais consolidados na literatura. O que o mobfogsim fornece no final das contas, ele é um ambiente para simular dispositivos iot em um ambiente de computação em nevoa, herança do cloudsim e do ifogsim. Ele tem suporte a alguns mecanimos de migração, como cold e live migration, herança do myifogsim, e possui supporte a mobilidade realisticas desses dispositivos iot, em que nós implementamos uma integração com simuladores de mobilidade como o sumo, que também é muito consolidado na literatura. Com base nele nós podemos utilizar bases de dados reais pra simular a mobilidade desses usuarios. Nesse ponto, o mobfogsim já era o primeiro e unico a fornecer todas essas caracteristicas. Mas ainda o nosso simulador também se tornou o primeiro a incorporar conceitos de slicing nesse ambiente.
 					</aside>
 				</section>	
-
-<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>MobFogSim Validation</h3>
-					<p>Service migration - Testbed setup</p>
-					<img src="images/testbed.png" class="r-stretch">
-
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>MobFogSim Validation</h3>
-					<p>Service migration - Simulation setup</p>
-					<table style="font-size: 20px;">
-						<thead>
-							<tr>
-								<th>Parameter</th>
-								<th>Value</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Number of edge nodes</td>
-								<td>144</td>
-							</tr>
-							<tr>
-								<td>Access point coverage (radius)</td>
-								<td>500 meters</td>
-							</tr>
-							<tr>
-								<td>Container size</td>
-								<td>128 MB</td>
-							</tr>
-							<tr>
-								<td>Container's execution state size in live migration process</td>
-								<td>1.2MB, 6MB, and 12MB</td>
-							</tr>
-							<tr>
-								<td>Througput between edge nodes</td>
-								<td>74 mbps</td>
-							</tr>
-							<tr>
-								<td>User mobility</td>
-								<td>Constant direction and speed (20 kmph)</td>
-							</tr>
-							<tr>
-								<td>Number of users</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td>Number of simulations</td>
-								<td>30</td>
-							</tr>
-						</tbody>
-					</table>
-
-
-					<aside class="notes">
-						Para poder elevar o nivel de confiabilidade dos resultados do simulador, nós construimos um testbed, uma infraestrutura real, de um cenario mais reduzido, em parceria com pesquisadores da universidade de pisa, na italia, e de cardiff no reino unido e montamos um cenario equivalente no simulador pra poder comparar os resultados. Também utilizamos, em uma segunda parte do experimento, dados de mobilidade realisticos de mobilidade de veiculos de luxemburgo pra poder avaliar como a rede se comportaria nesse cenario. De novo eu ressalto que varios outros experimentos foram feitos e podem ser encontrados com mais detalhes no artigos que eu indiquei.
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
-					<h3>MobFogSim Validation</h3>
-					<p>Testbed vs MobFogSim</p>
-					<img src="images/TMT.png" style="width: 40%; height: 40%;">
-					<img src="images/migration_time.png" style="width: 45%; height: 45%;">
-					<p>Service Migration time in the testbed and MobFogSim</p>
-
-					<aside class="notes">
-						Um dos resultados que nós podemos comparar é o tempo de migração, quanto tempo foi necessario pra realizar uma migração. Nós podemos ver que os resultados da infraestrutura real, no grafico a direita, são compativeis com os resultados do simulador, ilustrado no grafico da esquerda, pras duas configurações de rede que nós utilizamos, uma mais rapida e outra mais lenta.
-					</aside>
-				</section>
- 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>MobFogSim Validation</h3>
-					<p>Testbed vs MobFogSim</p>
-					<img src="images/DT.png" style="width: 40%; height: 40%;">
-					<img src="images/downtime.png" style="width: 45%; height: 45%;">
-					<p>Downtime in the testbed and MobFogSim</p>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>MobFogSim Validation</h3>
-					<p>Testbed vs MobFogSim</p>
-					<img src="images/VOL.png" style="width: 40%; height: 40%;">
-					<img src="images/data_sent.png" style="width: 45%; height: 45%;">
-					<p>Data tranfered during migrations in the testbed and MobFogSim</p>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Realistic user mobility</h3>
-					<div class="r-stack">
-						<img src="images/lustscenariotopology.png" style="width: 70%; height: 70% border: 1px solid #000000;">
-						<table class="fragment" style="font-size: 20px; background-color:rgba(255, 255, 255, 0.9)">
-							<thead>
-								<tr>
-									<th>Parameter</th>
-									<th>Value</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Container size</td>
-									<td>128 MB</td>
-								</tr>
-								<tr>
-									<td>Container's execution state size in live migration process</td>
-									<td>1.2MB</td>
-								</tr>
-								<tr>
-									<td>Access point coverage (radius)</td>
-									<td>500 meters</td>
-								</tr>
-								<tr>
-									<td>Number of Cloudlets</td>
-									<td>16</td>
-								</tr>
-								<tr>
-									<td>Density of Cloudlets per Access Points</td>
-									<td>1:4</td>
-								</tr>
-								<tr>
-									<td>Migration strategy</td>
-									<td>Lowest latency</td>
-								</tr>
-								<tr>
-									<td>User's mobility</td>
-									<td>Variable - real data</td>
-								</tr>
-								<tr>
-									<td>Map size</td>
-									<td>10km x 10km</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Realistic user mobility</h3>
-					<p>Users have different requirements</p>
-					<img  src="images/migrationscold.png" style="width: 40%; height: 40%;">
-					<img  src="images/latencylive.png" style="width: 40%; height: 40%;">
-					<p>Number of migrations and latency for users with different speed</p>
-
-					<aside class="notes">
-						Como eu falei, foram realizados muitos experimentos pra explorar algumas capacidades do simulador mas eu não vou entrar em muitos detalhes nessa apresentação. Porém, pode-se observar que os usuários podem apresentar diferentes caracteristicas e que isso pode impactar de alguma maneira a rede. por exemplo, Uma dessas caracteristicas é a velocidade desses usuarios. (next) nós podemos ver no grafico a esquerda por exemplo, que quanto mais rapido o usuario esta, menos migrações a infraestrutura consegue executar. Se a gente olhar pro grafico da direita, que é a latencia, a gente vai poder notar que esse numero de migrações reduzido acaba aumentando a latencia. Se a infraestrutura esta corrigindo menos vezes a localização do serviço, ele vai ficar mais longe e por consequencia, apresentar uma maior latencia. Se a gente tratar todos os usuarios de forma igual, o tempo de migração vai ser o mesmo. O veiculo mais rapido talvez precise de especial nesse sentido.
-					</aside>
-				</section>
-
-				<section data-background-transition="slide" data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Introducing network slicing on service migration problem</h3>
-					<aside class="notes">
-						Com base nesse cenario que nós começamos a investigar esse casamento entre slices e migração pra poder tirar alguma vantagem do que essas duas tecnologias tem a oferecer. Como eu tenho usuarios que demandam prioridades especificas, talvez eu possa criar uma rede virtual que supra a necessidade desses usuarios.
-					</aside>
-				</section>
--->
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Validation scenario</h3>
@@ -583,7 +417,7 @@
 
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
 					<h3>Validation scenario</h3>
-					
+					<p>Input parameters based on a testbed setup</p>
 					<table style="font-size: 20px;">
 						<thead>
 							<tr>
@@ -753,7 +587,7 @@
 				<section data-background-color="#FFF" data-transition="slide" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/static_slicing_mobile_1.png" style="width: 80%; height: 80% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_1.png" style="width: 95%; height: 95% border: 1px solid #000000;">
 
 					<aside class="notes">
 						O que nós podemos notar nesse primeiro experimento utilizando alocação estatica dos slices(next), o tempo de migração, no grafico a esquerda, apresentou o mesmo comportamento do experimento anterior. (next) pro numero de migração que cada usuario fez, que é uma novidade desse experimento, no grafico do centro, da pra perceber que quanto mais lenta a migração, menos migrações os usuarios fazem (next) e isso tem impacto na latencia que eles experimentam, no grafico da direita, ja que o serviço que o usuario esta acessando esta ficando mais longe dele.
@@ -763,7 +597,7 @@
 				<section data-background-color="#FFF" data-transition="none" data-background-transition="none" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/static_slicing_mobile_2.png" style="width: 80%; height: 80% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_2.png" style="width: 95%; height: 95% border: 1px solid #000000;">
 
 					<aside class="notes">
 					</aside>
@@ -772,7 +606,7 @@
 				<section data-background-color="#FFF" data-transition="none" data-background-transition="none" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/static_slicing_mobile_3.png" style="width: 80%; height: 80% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_3.png" style="width: 95%; height: 95% border: 1px solid #000000;">
 
 					<aside class="notes">
 					</aside>
@@ -781,7 +615,7 @@
 				<section data-background-color="#FFF" data-transition="none" data-background-transition="none" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
 					<h3>Static Slicing Allocation Results</h3>
 					<p>Migration time, number of migrations, and latency</p>
-					<img  src="images/static_slicing_mobile_4.png" style="width: 80%; height: 80% border: 1px solid #000000;">
+					<img  src="images/static_slicing_mobile_4.png" style="width: 95%; height: 95% border: 1px solid #000000;">
 
 					<aside class="notes">
 					</aside>
@@ -847,247 +681,14 @@
 					<aside class="notes">
 					</aside>
 				</section>
-<!--
-				<section data-background-transition="slide" data-background-image="images/logos/unicampbw.png" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>What if end devices share its idle resources?</h3>
-					<aside class="notes">
-					</aside>
-				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Adhoc scenario</h3>
-					<img src="images/scenarios_adhoc.png" style="width: 80%; height: 80% border: 1px solid #000000;">
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Adhoc scenario</h3>
-					<div class="r-stack">
-						<img src="images/heatmap_luxembourg.png" class="r-stretch">
-						<table class="fragment" style="font-size: 20px; background-color:rgba(255, 255, 255, 0.9)">
-							<thead>
-								<tr>
-									<th>Parameter</th>
-									<th>Value</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Container size</td>
-									<td>128 MB</td>
-								</tr>
-								<tr>
-									<td>Container's execution state size in live migration process</td>
-									<td>1.2MB</td>
-								</tr>
-								<tr>
-									<td>Access point coverage (radius)</td>
-									<td>500 meters</td>
-								</tr>
-								<tr>
-									<td>Vehicle communication range (radius)</td>
-									<td>500 meters</td>
-								</tr>
-								<tr>
-									<td>Number of Cloudlets</td>
-									<td>16</td>
-								</tr>
-								<tr>
-									<td>Density of Cloudlets per Access Points</td>
-									<td>1:4</td>
-								</tr>
-								<tr>
-									<td>Migration strategy</td>
-									<td>Lowest latency</td>
-								</tr>
-								<tr>
-									<td>Server node processing capacity (edge)</td>
-									<td>6468MIPS</td>
-								</tr>
-								<tr>
-									<td>Server node processing capacity (Vehicle)</td>
-									<td>[3234,6468]MIPS</td>
-								</tr>
-								<tr>
-									<td>Edge node bandwidth</td>
-									<td>[74.1, 148.2]</td>
-								</tr>
-								<tr>
-									<td>Vehicle bandwidth</td>
-									<td>[74.1, 148.2]</td>
-								</tr>
-								<tr>
-									<td>User's speed</td>
-									<td>Variable - real data</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
-					<aside class="notes">
-						
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
-					<h3>Adhoc scenario</h3>
-					<p>Edge node allocation</p>
-					<div class="r-vstack">
-						<img src="images/adhoccloudletresources.png" style="width: 70%; height: 70%;">
-						<img src="images/adhocvehicularresources.png" style="width: 70%; height: 70%;">
-					</div>
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
-					<h3>Adhoc scenario</h3>
-					<p>Edge node allocation</p>
-					<div class="r-vstack">
-						<img src="images/adhoccloudletresources.png" style="width: 70%; height: 70%;  border: 4px solid #000000;">
-						<img src="images/adhocvehicularresources.png" style="width: 70%; height: 70%;">
-					</div>
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted">
-					<h3>Adhoc scenario</h3>
-					<p>Edge node allocation</p>
-					<div class="r-vstack">
-						<img src="images/adhoccloudletresources.png" style="width: 70%; height: 70%;">
-						<img src="images/adhocvehicularresources.png" style="width: 70%; height: 70%; border: 4px solid #000000;">
-					</div>
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Adhoc scenario</h3>
-					<p>Bandwidth allocation</p>
-					<div class="r-vstack">
-						<img src="images/adhocbandwidth.png" style="width: 70%; height: 70%;">
-					</div>
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
-					<h3>Adhoc scenario</h3>
-					<p>Service placement</p>
-					<div class="r-vstack">
-						<img src="images/adhocserviceplacement.png" style="width: 70%; height: 70%;">
-						<img src="images/adhocserviceplacementvehicles.png" style="width: 70%; height: 70%;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate>
-					<h3>Adhoc scenario</h3>
-					<p>Service placement</p>
-					<div class="r-vstack">
-						<img src="images/adhocserviceplacement.png" style="width: 70%; height: 70%; border: 4px solid #000000;">
-						<img src="images/adhocserviceplacementvehicles.png" style="width: 70%; height: 70%;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
-					<h3>Adhoc scenario</h3>
-					<p>Service placement</p>
-					<div class="r-vstack">
-						<img src="images/adhocserviceplacement.png" style="width: 70%; height: 70%;">
-						<img src="images/adhocserviceplacementvehicles.png" style="width: 70%; height: 70%; border: 4px solid #000000;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Adhoc scenario</h3>
-					<p>Resource usage</p>
-					<div class="r-vstack">
-						<img src="images/adhocresourceusage.png" style="width: 70%; height: 70%;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
-					<h3>Adhoc scenario</h3>
-					<p>Service Migration</p>
-					<div class="r-vstack">
-						<img src="images/adhocservicemigrations.png" style="width: 70%; height: 70%;">
-						<img src="images/adhocmigrationtime.png" style="width: 70%; height: 70%;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate>
-					<h3>Adhoc scenario</h3>
-					<p>Service Migration</p>
-					<div class="r-vstack">
-						<img src="images/adhocservicemigrations.png" style="width: 70%; height: 70%; border: 4px solid #000000;">
-						<img src="images/adhocmigrationtime.png" style="width: 70%; height: 70%;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
-					<h3>Adhoc scenario</h3>
-					<p>Service Migration</p>
-					<div class="r-vstack">
-						<img src="images/adhocservicemigrations.png" style="width: 70%; height: 70%;">
-						<img src="images/adhocmigrationtime.png" style="width: 70%; height: 70%; border: 4px solid #000000;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Adhoc scenario</h3>
-					<p>Service latency</p>
-					<div class="r-vstack">
-						<img src="images/adhoclatency.png" style="width: 70%; height: 70%;">
-					</div>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
--->
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>What is the cost of slice reconfiguration?</h3>
 					<aside class="notes">
 					</aside>
 				</section>
 
-				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate data-auto-animate-duration="0">
+				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate data-visibility="uncounted" data-auto-animate>
 					<h3>What is the cost of slice reconfiguration?</h3>
 					<img src="images/whatitcost.png" style="width: 50%; height: 50%;">
 					<aside class="notes">
@@ -1143,46 +744,6 @@
 					</aside>
 				</section>
 
-<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Reconfiguration overhead</h3>
-					<p>Evaluation</p>				
-						<table style="font-size: 20px; background-color:rgba(255, 255, 255, 0.9)">
-							<thead>
-								<tr>
-									<th>Parameter</th>
-									<th>Value</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Number of slices</td>
-									<td>2</td>
-								</tr>
-								<tr>
-									<td>Initial bandwidth distribution per slice</td>
-									<td>50%</td>
-								</tr>
-								<tr>
-									<td>Traffic distribution per slice (% of total users)</td>
-									<td>10%, 20%, and 40% in Slice 1<br>90%, 80%, and 60% in Slice 2</td>
-								</tr>
-								<tr>
-									<td>Slice’s reconfiguration delay</td>
-									<td>2, 30, and 60 seconds</td>
-								</tr>
-							</tbody>
-						</table>
-				</section>
--->
-<!--				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%">
-					<h3>Reconfiguration overhead</h3>
-					<p>Number of reconfigurations</p>
-					<img src="images/timeline_realocacoes_uni.png" style="width: 95%; height: 95%;">
-				
-					<aside class="notes">
-					</aside>
-				</section>
--->				
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/logos/unicamp.svg" data-background-position="bottom 16px left 20px" data-background-size="3%" data-auto-animate>
 					<h3>Reconfiguration overhead</h3>
 					<p>Slice outage</p>
@@ -1278,23 +839,6 @@
 				<section data-background-color="#FFF" data-background-transition="slide" data-background-image="images/articles/artigo.png">
 					<div style="background-color:rgba(0, 0, 0, 0.8);">
 					<h3 style="color:#FFF;">MobFogSim</h3>
-		<!--			<div class="r-stack">
-						<img src="images/articles/1.png" width="70%"">
-						<img class="fragment" src="images/articles/2.png" width="70%"">
-						<img class="fragment" src="images/articles/3.png" width="70%"">
-						<img class="fragment" src="images/articles/4.png" width="70%"">
-						<img class="fragment" src="images/articles/5.png" width="70%"">
-						<img class="fragment" src="images/articles/11.png" width="70%"">
-						<img class="fragment" src="images/articles/12.png" width="70%"">
-						<img class="fragment" src="images/articles/13.png" width="70%"">
-						<img class="fragment" src="images/articles/14.png" width="70%"">
-						<img class="fragment" src="images/articles/6.png" width="70%"">
-						<img class="fragment" src="images/articles/7.png" width="70%"">
-						<img class="fragment" src="images/articles/8.png" width="70%"">
-						<img class="fragment" src="images/articles/9.png" width="70%"">
-						<img class="fragment" src="images/articles/10.png" width="70%"">
-						<img class="fragment" src="images/articles/15.png" width="70%"">
-						<img class="fragment" src="images/articles/16.png" width="70%"">-->
 
 						<ul style="font-size: 35px;">
 							<p style="color: #FFF">26 works report MobFogSim as its validation environment</td>
@@ -1313,11 +857,6 @@
 					<ul style="font-size: 0.7em;">
 						<li>Zero-touch Networks and Computing Continuum</li>
 						<ul><li>ML-based solutions can fully self-manage operations such as the prediction of resource demand and user requirements, the placement and migration of VNFs, and the creation, configuration, and management of network slices.</li></ul>
-<!--						<li>Dynamic hardware customisation for mobile users</li>
-						<ul><li>Customised hardware trades off flexibility for efficiency, enabling applications to run faster, reducing energy consumption, or both;</li>
-						<li>On FPGAs, hardware configuration can be made dynamically and on demand;</li>
-						<li><span style="font-style: italic;">Hardware as a state</span> - hardware settings could follow the mobile users.</ul>
--->
 					</ul>
 				</section>
 
